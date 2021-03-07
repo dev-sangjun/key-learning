@@ -19,6 +19,16 @@ const Shape2 = styled.img`
   bottom: 0;
 `;
 
+const Avatar = styled.img`
+  position: absolute;
+  top: 47px;
+  right: 59px;
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+`;
+
 const Homepage = props => {
   const { className } = props;
 
@@ -27,6 +37,7 @@ const Homepage = props => {
       <Shape1 src={Shape1Image} alt="bg-shape-1" />
       <Shape2 src={Shape2Image} alt="bg-shape-2" />
       <Header />
+      <Avatar src="https://picsum.photos/100/100" />
     </div>
   );
 };
