@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Header } from "../../containers";
 import Shape1Image from "./assets/shape1.png";
 import Shape2Image from "./assets/shape2.png";
 
@@ -25,8 +26,15 @@ const Homepage = props => {
     <div className={className}>
       <Shape1 src={Shape1Image} alt="bg-shape-1" />
       <Shape2 src={Shape2Image} alt="bg-shape-2" />
+      <Header />
     </div>
   );
 };
 
-export default Homepage;
+export default styled(Homepage)`
+  height: 100%;
+  background-color: #eff1f7;
+  * {
+    font-family: "Poppins", sans-serif;
+  }
+`;
