@@ -1,3 +1,3 @@
 import SearchBar from "./SearchBar";
-
-export { SearchBar };
+import ListItem from "./ListItem";
+export { SearchBar, ListItem };
