@@ -1,19 +1,19 @@
 import "./styles/App.css";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { Home as HomeSimple } from "./pages/Simple";
 import { Home as HomeComplex } from "./pages/Complex";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-          <Route path="/key-learning/complex">
-            <HomeComplex />
-          </Route>
-          <Route path="/">
+          <Route exact path="/">
             <HomeSimple />
+          </Route>
+          <Route path="/complex">
+            <HomeComplex />
           </Route>
         </Switch>
       </Router>
