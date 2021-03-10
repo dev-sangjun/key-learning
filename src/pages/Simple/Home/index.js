@@ -22,25 +22,26 @@ const Shape2 = styled.img`
 
 const Header = styled.div`
   position: absolute;
-  top: 57px;
-  left: 69px;
-  z-index: 1;
+  top: 47px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 `;
 
 const Avatar = styled.img`
-  position: absolute;
-  top: 47px;
-  right: 59px;
   width: 61px;
   height: 61px;
   border-radius: 50%;
+  margin-left: 38px;
+  margin-right: 59px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
 
 const Logo = styled.img`
   width: 142px;
   height: 37px;
+  margin-left: 69px;
 `;
 
 const Home = props => {
@@ -52,9 +53,11 @@ const Home = props => {
       <Shape2 src={Shape2Image} alt="bg-shape-2" />
       <Header>
         <Logo src={LogoImage} alt="logo" />
-        <SearchBar />
+        <div className="header-right">
+          <SearchBar />
+          <Avatar src="https://picsum.photos/100/100" />
+        </div>
       </Header>
-      <Avatar src="https://picsum.photos/100/100" />
     </div>
   );
 };
@@ -64,5 +67,11 @@ export default styled(Home)`
   background-color: #eff1f7;
   * {
     font-family: "Poppins", sans-serif;
+  }
+  .header-right {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
   }
 `;

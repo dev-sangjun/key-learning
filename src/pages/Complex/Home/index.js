@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SearchBar from "../../../components/SearchBar";
 import Sidebar from "../../../containers/Sidebar";
+
 const Header = styled.div`
   position: absolute;
   top: 47px;

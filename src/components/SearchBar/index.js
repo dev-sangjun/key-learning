@@ -39,7 +39,8 @@ export default styled(SearchBar)`
   display: flex;
   align-items: center;
   margin-left: 22px;
-  width: 817px;
+  width: 100%;
+  max-width: 817px;
   height: 36px;
   border-radius: 14px;
   background-color: white;
