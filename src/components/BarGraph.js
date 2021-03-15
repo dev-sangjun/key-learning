@@ -50,6 +50,8 @@ export default styled(BarGraph)`
   background-color: white;
   border-radius: 14px;
   overflow: hidden;
+  opacity: 0.9;
+  box-shadow: 0px 4px 40px rgba(118, 87, 254, 0.3);
   .bar {
     width: ${props => `${props.percentage}%`};
     max-width: 100%;
