@@ -10,7 +10,7 @@ const Logo = styled.img`
 `;
 
 const ListItems = styled.ul`
-  margin-top: 46px;
+  margin-top: 61px;
   list-style: none;
   color: white;
   font-family: "Roboto", sans-serif;
@@ -32,10 +32,10 @@ const Sidebar = props => {
     <div className={className}>
       <Logo src={LogoImage} />
       <ListItems>
-        <ListItem label="Dashboard" selected />
-        <ListItem label="Bookmarked" />
-        <ListItem label="Key Courses Rec." />
-        <ListItem label="Freelance Job Posts" />
+        <ListItem label="Dashboard" link="/complex/" selected />
+        <ListItem label="Bookmarked" link="/complex/bookmarked" />
+        <ListItem label="Key Courses Rec." link="/complex/key_courses" />
+        <ListItem label="Freelance Job Posts" link="/complex/job_posts" />
       </ListItems>
     </div>
   );

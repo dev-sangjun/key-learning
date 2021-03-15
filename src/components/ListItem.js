@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const ListItem = props => {
-  const { className, label, selected } = props;
+  const { className, label, selected, link } = props;
 
   return (
     <li className={className}>
-      <span>{label}</span>
+      <Link classname="link" to={link}>
+        {label}
+      </Link>
       {selected && <div className="selected-highlight" />}
     </li>
   );
@@ -14,10 +17,11 @@ const ListItem = props => {
 
 export default styled(ListItem)`
   position: relative;
-  span {
+  a {
     position: relative;
     z-index: 2;
     color: ${props => (props.selected ? "#7657FE" : "white")};
+    text-decoration: none;
   }
   .selected-highlight {
     position: absolute;

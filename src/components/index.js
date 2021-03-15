@@ -1,3 +1,4 @@
 import SearchBar from "./SearchBar";
 import ListItem from "./ListItem";
-export { SearchBar, ListItem };
+import BarGraph from "./BarGraph";
+export { SearchBar, ListItem, BarGraph };

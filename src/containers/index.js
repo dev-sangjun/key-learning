@@ -1,2 +1,3 @@
 import Sidebar from "./Sidebar";
-export { Sidebar };
+import ComplexKPIContainer from "./ComplxKPIContainer";
+export { Sidebar, ComplexKPIContainer };
