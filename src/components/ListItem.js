@@ -18,6 +18,8 @@ const ListItem = props => {
 export default styled(ListItem)`
   position: relative;
   a {
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
     position: relative;
     z-index: 2;
     color: ${props => (props.selected ? "#7657FE" : "white")};
