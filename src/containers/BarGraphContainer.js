@@ -49,4 +49,5 @@ export default styled(BarGraphContainer)`
   grid-template-rows: 62px;
   grid-gap: 18px;
   padding-right: 89px;
+  margin-bottom: 79px;
 `;

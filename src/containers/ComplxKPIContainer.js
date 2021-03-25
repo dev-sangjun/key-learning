@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
 import BarGraphContainer from "./BarGraphContainer";
+import CircleItemContainer from "./CircleItemContainer";
 
 const ComplexKPIContainer = props => {
   /*
@@ -17,6 +18,7 @@ const ComplexKPIContainer = props => {
       case "bar":
         return <BarGraphContainer />;
       case "circle":
+        return <CircleItemContainer />;
       case "list":
       default:
         break;

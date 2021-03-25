@@ -31,6 +31,10 @@ const Home = props => {
       <Sidebar />
       <div className="kpi-containers">
         <ComplexKPIContainer title="Top 5 Industries for the U.S." type="bar" />
+        <ComplexKPIContainer
+          title="Top 5 Freelancing Roles for the U.S."
+          type="circle"
+        />
       </div>
     </div>
   );
