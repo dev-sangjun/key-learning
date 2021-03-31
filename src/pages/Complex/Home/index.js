@@ -35,6 +35,10 @@ const Home = props => {
           title="Top 5 Freelancing Roles for the U.S."
           type="circle"
         />
+        <ComplexKPIContainer
+          title="Top 10 Most Needed Skills for the U.S."
+          type="list"
+        />
       </div>
     </div>
   );
@@ -44,11 +48,9 @@ export default styled(Home)`
   position: relative;
   display: grid;
   grid-template-columns: 230px 1fr;
+  width: 100%;
   height: 100%;
   background-color: #eff1f7;
-  * {
-    font-family: "Poppins", sans-serif;
-  }
   ${SearchBar} {
     width: 341px;
   }

@@ -7,7 +7,7 @@ const ListItem = props => {
 
   return (
     <li className={className}>
-      <Link classname="link" to={link}>
+      <Link className="link" to={link}>
         {label}
       </Link>
       {selected && <div className="selected-highlight" />}

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { v4 as uuidv4 } from "uuid";
+import SkillsListContainer from "./SkillsListContainer";
 import BarGraphContainer from "./BarGraphContainer";
 import CircleItemContainer from "./CircleItemContainer";
 
@@ -20,6 +21,7 @@ const ComplexKPIContainer = props => {
       case "circle":
         return <CircleItemContainer />;
       case "list":
+        return <SkillsListContainer />;
       default:
         break;
     }
@@ -49,13 +51,17 @@ export default styled(ComplexKPIContainer)`
     h3 {
       font-size: 24px;
       margin-right: 14px;
+      font-family: "Poppins", sans-serif;
     }
     .sort-checkbox {
+      position: relative;
+      top: 2px;
       width: 12px;
       margin-right: 8px;
     }
     .sort-label {
       font-size: 20px;
+      font-family: "Poppins", sans-serif;
     }
   }
 `;

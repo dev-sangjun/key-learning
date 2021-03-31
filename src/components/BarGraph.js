@@ -10,13 +10,17 @@ const Number = styled.div`
   color: #7657fe;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Title = styled.span`
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 20px;
   margin-left: 16px;
+  font-family: "Poppins", sans-serif;
 `;
 
 const Entries = styled.span`
@@ -26,6 +30,7 @@ const Entries = styled.span`
   font-size: 20px;
   margin-left: 16px;
   text-align: right;
+  font-family: "Poppins", sans-serif;
 `;
 
 const BarGraph = props => {
