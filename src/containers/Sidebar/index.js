@@ -10,10 +10,9 @@ const Logo = styled.img`
 `;
 
 const ListItems = styled.ul`
-  margin-top: 46px;
+  margin-top: 61px;
   list-style: none;
   color: white;
-  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,6 +24,25 @@ const ListItems = styled.ul`
   }
 `;
 
+const listItems = [
+  {
+    label: "Dashboard",
+    link: "/complex/",
+  },
+  {
+    label: "Bookmarked",
+    link: "/complex/bookmarked",
+  },
+  {
+    label: "Key Courses Rec.",
+    link: "/complex/key_courses",
+  },
+  {
+    label: "Freelance Job Posts",
+    link: "/complex/job_posts",
+  },
+];
+
 const Sidebar = props => {
   const { className } = props;
 
@@ -32,10 +50,9 @@ const Sidebar = props => {
     <div className={className}>
       <Logo src={LogoImage} />
       <ListItems>
-        <ListItem label="Dashboard" selected />
-        <ListItem label="Bookmarked" />
-        <ListItem label="Key Courses Rec." />
-        <ListItem label="Freelance Job Posts" />
+        {listItems.map((listItem, index) => (
+          <ListItem {...listItem} key={index} />
+        ))}
       </ListItems>
     </div>
   );

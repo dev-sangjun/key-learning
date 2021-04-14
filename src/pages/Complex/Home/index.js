@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import SearchBar from "../../../components/SearchBar";
-import Sidebar from "../../../containers/Sidebar";
+import { SearchBar } from "../../../components";
+import { Sidebar, ComplexKPIContainer } from "../../../containers";
 
 const Header = styled.div`
   position: absolute;
@@ -29,18 +29,33 @@ const Home = props => {
         <Avatar src="https://picsum.photos/100/100" />
       </Header>
       <Sidebar />
+      <div className="kpi-containers">
+        <ComplexKPIContainer title="Top 5 Industries for the U.S." type="bar" />
+        <ComplexKPIContainer
+          title="Top 5 Freelancing Roles for the U.S."
+          type="circle"
+        />
+        <ComplexKPIContainer
+          title="Top 10 Most Needed Skills for the U.S."
+          type="list"
+        />
+      </div>
     </div>
   );
 };
 
 export default styled(Home)`
   position: relative;
-  height: 100%;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  width: 100%;
   background-color: #eff1f7;
-  * {
-    font-family: "Poppins", sans-serif;
-  }
   ${SearchBar} {
     width: 341px;
+  }
+  .kpi-containers {
+    margin-top: 141px;
+    margin-bottom: 127px;
+    padding-left: 70px;
   }
 `;
