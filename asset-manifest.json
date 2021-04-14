@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/key-learning/static/css/main.b82c5a4f.chunk.css",
-    "main.js": "/key-learning/static/js/main.d5de23bc.chunk.js",
-    "main.js.map": "/key-learning/static/js/main.d5de23bc.chunk.js.map",
+    "main.js": "/key-learning/static/js/main.7549dde8.chunk.js",
+    "main.js.map": "/key-learning/static/js/main.7549dde8.chunk.js.map",
     "runtime-main.js": "/key-learning/static/js/runtime-main.32aaf28b.js",
     "runtime-main.js.map": "/key-learning/static/js/runtime-main.32aaf28b.js.map",
-    "static/js/2.0d5a6028.chunk.js": "/key-learning/static/js/2.0d5a6028.chunk.js",
-    "static/js/2.0d5a6028.chunk.js.map": "/key-learning/static/js/2.0d5a6028.chunk.js.map",
+    "static/js/2.4006bbb6.chunk.js": "/key-learning/static/js/2.4006bbb6.chunk.js",
+    "static/js/2.4006bbb6.chunk.js.map": "/key-learning/static/js/2.4006bbb6.chunk.js.map",
     "index.html": "/key-learning/index.html",
     "static/css/main.b82c5a4f.chunk.css.map": "/key-learning/static/css/main.b82c5a4f.chunk.css.map",
-    "static/js/2.0d5a6028.chunk.js.LICENSE.txt": "/key-learning/static/js/2.0d5a6028.chunk.js.LICENSE.txt",
+    "static/js/2.4006bbb6.chunk.js.LICENSE.txt": "/key-learning/static/js/2.4006bbb6.chunk.js.LICENSE.txt",
     "static/media/logo.30fb120a.png": "/key-learning/static/media/logo.30fb120a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.32aaf28b.js",
-    "static/js/2.0d5a6028.chunk.js",
+    "static/js/2.4006bbb6.chunk.js",
     "static/css/main.b82c5a4f.chunk.css",
-    "static/js/main.d5de23bc.chunk.js"
+    "static/js/main.7549dde8.chunk.js"
   ]
 }
