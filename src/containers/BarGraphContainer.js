@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 import { BarGraph } from "../components";
 
 const max = 1563254;
 const getPercentage = num => (num / max) * 100;
 
-const industries = [
+const initState = [
   {
     title: "Healthcare",
     entries: 1563254,
@@ -35,6 +36,14 @@ const industries = [
 
 const BarGraphContainer = props => {
   const { className } = props;
+  const [industries, setIndustries] = useState(initState);
+  useEffect(() => {
+    const url = "url";
+    axios
+      .get(url)
+      .then(res => setIndustries(res.data))
+      .catch(err => console.log(err));
+  }, []);
   return (
     <div className={className}>
       {industries.map((industry, index) => (

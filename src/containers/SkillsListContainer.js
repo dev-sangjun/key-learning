@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 const SkillItem = styled.li`
   width: 207px;
@@ -14,7 +15,7 @@ const SkillItem = styled.li`
   }
 `;
 
-const skills = [
+const initState = [
   {
     title: "Communications",
   },
@@ -49,7 +50,14 @@ const skills = [
 
 const SkillsListContainer = props => {
   const { className } = props;
-
+  const [skills, setSkills] = useState(initState);
+  useEffect(() => {
+    const url = "url";
+    axios
+      .get(url)
+      .then(res => setSkills(res.data))
+      .catch(err => console.log(err));
+  }, []);
   return (
     <div className={className}>
       <div className="skills-list">

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 import { CircleItem } from "../components";
 
-const freelancingRoles = [
+const initState = [
   {
     title: "Software Development",
     entries: 509246,
@@ -27,7 +28,14 @@ const freelancingRoles = [
 
 const CircleItemContainer = props => {
   const { className } = props;
-
+  const [freelancingRoles, setFreelancingRoles] = useState(initState);
+  useEffect(() => {
+    const url = "url";
+    axios
+      .get(url)
+      .then(res => setFreelancingRoles(res.data))
+      .catch(err => console.log(err));
+  }, []);
   return (
     <div className={className}>
       {freelancingRoles.map((role, index) => (
