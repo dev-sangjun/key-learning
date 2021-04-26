@@ -52,11 +52,15 @@ const SkillsListContainer = props => {
   const { className } = props;
   const [skills, setSkills] = useState(initState);
   useEffect(() => {
-    const url = "url";
-    axios
-      .get(url)
-      .then(res => setSkills(res.data))
-      .catch(err => console.log(err));
+    const getData = async () => {
+      const { data } = await axios(
+        "http://keylearningportal-env.eba-si6y6ti8.us-east-2.elasticbeanstalk.com/industries"
+      );
+
+      console.log(data);
+    };
+
+    getData();
   }, []);
   return (
     <div className={className}>
