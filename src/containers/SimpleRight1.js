@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import axios from "axios";
 
 const SkillItem = styled.li`
   font-size: 20px;
@@ -12,7 +13,7 @@ const SkillItem = styled.li`
   
 `;
 
-const skills = [
+const initState = [
   {
     title: "Communications",
   },
@@ -47,7 +48,14 @@ const skills = [
 
 const SimpleRight1 = props => {
   const { className } = props;
-
+  const [skills, setSkills] = useState(initState);
+  useEffect(() => {
+    const url = 'http://keylearningservercors-env.eba-fs83ec2u.us-east-2.elasticbeanstalk.com/skills';
+    axios
+      .get(url)
+      .then(res => setSkills(res.data))
+      .catch(err => console.log(err));
+  }, []);
   return (
     <div className={className}>
         <ul>
