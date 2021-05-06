@@ -34,7 +34,7 @@ const Entries = styled.span`
 `;
 
 const BarGraph = props => {
-  const { className, number, title, entries, percentage } = props;
+  const { className, number, title, entries } = props;
 
   return (
     <div className={className}>

@@ -15,62 +15,27 @@ const SkillItem = styled.li`
   }
 `;
 
-const initState = [
-  {
-    title: "Communications",
-  },
-  {
-    title: "Management",
-  },
-  {
-    title: "Leadership",
-  },
-  {
-    title: "Customer Service",
-  },
-  {
-    title: "Operations",
-  },
-  {
-    title: "Sales",
-  },
-  {
-    title: "Innovation",
-  },
-  {
-    title: "Problem Solving",
-  },
-  {
-    title: "Detail Oriented",
-  },
-  {
-    title: "Presentations",
-  },
-];
-
 const SkillsListContainer = props => {
   const { className } = props;
-  const [skills, setSkills] = useState(initState);
+  const [skills, setSkills] = useState(null);
   useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios(
-        "http://keylearningportal-env.eba-si6y6ti8.us-east-2.elasticbeanstalk.com/industries"
-      );
-
-      console.log(data);
-    };
-
-    getData();
+    const url =
+      "http://keylearningservercors-env.eba-fs83ec2u.us-east-2.elasticbeanstalk.com/skills";
+    axios
+      .get(url)
+      .then(res => setSkills(res.data))
+      .catch(err => console.log(err));
   }, []);
   return (
     <div className={className}>
       <div className="skills-list">
         <ul>
-          {skills.map((skill, index) => (
-            <SkillItem key={index}>
-              {index + 1}. {skill.title}
-            </SkillItem>
-          ))}
+          {skills &&
+            skills.map((skill, index) => (
+              <SkillItem key={index}>
+                {index + 1}. {skill.title}
+              </SkillItem>
+            ))}
         </ul>
       </div>
     </div>

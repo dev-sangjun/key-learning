@@ -3,52 +3,32 @@ import styled from "styled-components";
 import axios from "axios";
 import { BarGraph } from "../components";
 
-const max = 1563254;
+const max = 4;
 const getPercentage = num => (num / max) * 100;
-
-const initState = [
-  {
-    title: "Healthcare",
-    entries: 1563254,
-    percentage: getPercentage(1563254),
-  },
-  {
-    title: "Technology",
-    entries: 1328486,
-    percentage: getPercentage(1328486),
-  },
-  {
-    title: "Construction",
-    entries: 1022957,
-    percentage: getPercentage(1022957),
-  },
-  {
-    title: "Rental",
-    entries: 652861,
-    percentage: getPercentage(652861),
-  },
-  {
-    title: "Manufacturing",
-    entries: 509246,
-    percentage: getPercentage(509246),
-  },
-];
 
 const BarGraphContainer = props => {
   const { className } = props;
-  const [industries, setIndustries] = useState(initState);
+  const [industries, setIndustries] = useState(null);
   useEffect(() => {
-    const url = "url";
+    const url =
+      "http://keylearningservercors-env.eba-fs83ec2u.us-east-2.elasticbeanstalk.com/industries";
     axios
       .get(url)
-      .then(res => setIndustries(res.data))
+      .then(res => {
+        const data = res.data.map(industry => ({
+          ...industry,
+          percentage: getPercentage(industry.entries),
+        }));
+        setIndustries(data);
+      })
       .catch(err => console.log(err));
   }, []);
   return (
     <div className={className}>
-      {industries.map((industry, index) => (
-        <BarGraph {...industry} number={index + 1} key={index} />
-      ))}
+      {industries &&
+        industries.map((industry, index) => (
+          <BarGraph {...industry} number={index + 1} key={index} />
+        ))}
     </div>
   );
 };

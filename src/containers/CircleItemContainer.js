@@ -3,44 +3,25 @@ import styled from "styled-components";
 import axios from "axios";
 import { CircleItem } from "../components";
 
-const initState = [
-  {
-    title: "Software Development",
-    entries: 509246,
-  },
-  {
-    title: "Video Marketing",
-    entries: 302245,
-  },
-  {
-    title: "Web Development",
-    entries: 202345,
-  },
-  {
-    title: "Content Writing",
-    entries: 201379,
-  },
-  {
-    title: "Graphic Design",
-    entries: 179348,
-  },
-];
-
 const CircleItemContainer = props => {
   const { className } = props;
-  const [freelancingRoles, setFreelancingRoles] = useState(initState);
+  const [freelancingRoles, setFreelancingRoles] = useState(null);
   useEffect(() => {
-    const url = "url";
+    const url =
+      "http://keylearningservercors-env.eba-fs83ec2u.us-east-2.elasticbeanstalk.com/jobs";
     axios
       .get(url)
-      .then(res => setFreelancingRoles(res.data))
+      .then(res => {
+        setFreelancingRoles(res.data);
+      })
       .catch(err => console.log(err));
   }, []);
   return (
     <div className={className}>
-      {freelancingRoles.map((role, index) => (
-        <CircleItem {...role} number={index + 1} key={index} />
-      ))}
+      {freelancingRoles &&
+        freelancingRoles.map((role, index) => (
+          <CircleItem {...role} number={index + 1} key={index} />
+        ))}
     </div>
   );
 };
