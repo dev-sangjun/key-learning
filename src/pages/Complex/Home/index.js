@@ -51,6 +51,7 @@ export default styled(Home)`
   width: 100%;
   height: 100%;
   background-color: #eff1f7;
+  overflow-y: scroll;
   ${SearchBar} {
     width: 341px;
   }

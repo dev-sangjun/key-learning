@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import commaNumber from "comma-number";
+
 const Number = styled.div`
   background-color: white;
   width: 25px;
@@ -16,6 +17,7 @@ const Number = styled.div`
 `;
 
 const Title = styled.span`
+  flex: 1;
   color: white;
   font-weight: 700;
   font-size: 20px;
@@ -24,7 +26,6 @@ const Title = styled.span`
 `;
 
 const Entries = styled.span`
-  flex: 1;
   color: white;
   font-weight: 500;
   font-size: 20px;
