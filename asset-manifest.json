@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/key-learning/static/css/main.60360b29.chunk.css",
-    "main.js": "/key-learning/static/js/main.9d28f319.chunk.js",
-    "main.js.map": "/key-learning/static/js/main.9d28f319.chunk.js.map",
+    "main.css": "/key-learning/static/css/main.b82c5a4f.chunk.css",
+    "main.js": "/key-learning/static/js/main.aee3704d.chunk.js",
+    "main.js.map": "/key-learning/static/js/main.aee3704d.chunk.js.map",
     "runtime-main.js": "/key-learning/static/js/runtime-main.32aaf28b.js",
     "runtime-main.js.map": "/key-learning/static/js/runtime-main.32aaf28b.js.map",
     "static/js/2.2462b737.chunk.js": "/key-learning/static/js/2.2462b737.chunk.js",
     "static/js/2.2462b737.chunk.js.map": "/key-learning/static/js/2.2462b737.chunk.js.map",
     "index.html": "/key-learning/index.html",
-    "static/css/main.60360b29.chunk.css.map": "/key-learning/static/css/main.60360b29.chunk.css.map",
+    "static/css/main.b82c5a4f.chunk.css.map": "/key-learning/static/css/main.b82c5a4f.chunk.css.map",
     "static/js/2.2462b737.chunk.js.LICENSE.txt": "/key-learning/static/js/2.2462b737.chunk.js.LICENSE.txt",
     "static/media/logo.30fb120a.png": "/key-learning/static/media/logo.30fb120a.png"
   },
   "entrypoints": [
     "static/js/runtime-main.32aaf28b.js",
     "static/js/2.2462b737.chunk.js",
-    "static/css/main.60360b29.chunk.css",
-    "static/js/main.9d28f319.chunk.js"
+    "static/css/main.b82c5a4f.chunk.css",
+    "static/js/main.aee3704d.chunk.js"
   ]
 }
